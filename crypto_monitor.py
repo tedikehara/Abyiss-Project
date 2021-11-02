@@ -14,12 +14,12 @@ API_KEY = '''c1d3610a557a87beca88a20e781d37fa981a62c6658b46727b3cfe8a9c1927c9'''
 
 import cryptocompare as cc
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 # crypto compare object
 obj = cc.cryptocompare._set_api_key_parameter(API_KEY)
 # selenium driver
-location = "C:\Users\KShiro\Desktop\Abyiss-Project\Dependencies\chromedriver.exe"
-driver = webdriver.Chrome(location)
+driver = webdriver.Firefox()
 
 driver.get("https://www.google.com")
 
