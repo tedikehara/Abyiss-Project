@@ -7,7 +7,7 @@ crypto_monitor.py
 README.md
 
 How to use:
-run the python script and copy the http path from terminal to web browser to access the local host 
+Run the python script and copy the http path from terminal (in mycase as example: "http://127.0.0.1:5000/") to web browser to access the local host 
 
 
 

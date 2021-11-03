@@ -13,6 +13,7 @@
 from flask import Flask
 import cryptocompare as cc
 from datetime import date
+from datetime import datetime
 
 API_KEY = '''c1d3610a557a87beca88a20e781d37fa981a62c6658b46727b3cfe8a9c1927c9'''
 # crypto compare object
@@ -22,12 +23,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def monitor():
-    return "{} {}".format(date.today(), cc.get_price(['BTC', 'ETH', 'BNB', 'USDT', 'ADA', 'SOL', 'XRP', 'DOT', 'SHIB', 'DOGE'], currency='USD'))
+    return "{} {} {} {} {}".format(date.today(), ',',datetime.now().strftime("%H:%M:%S"), ',:',cc.get_price(['BTC', 'ETH', 'BNB', 'USDT', 'ADA', 'SOL', 'XRP', 'DOT', 'SHIB', 'DOGE'], currency='USD'))
 
 
 if __name__ == "__main__":
         app.run()
-
 
 
 
